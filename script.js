@@ -1,17 +1,14 @@
-function change(color){
-    
-    switch(color){
-  case "red": document.body.style.background="red";document.getElementById("red").classList.add("border-black");break;
-  case "blue": document.body.style.background="blue";document.getElementById("blue").classList.add("border-black");break;
-  case "green":document.body.style.background="green";document.getElementById("green").classList.add("border-black");break;
-  case "orange":document.body.style.background="orange";document.getElementById("orange").classList.add("border-black");break;
-  case "yellow":document.body.style.background="yellow";document.getElementById("yellow").classList.add("border-black");break;
-  case "white":document.body.style.background="white";document.getElementById("white").classList.add("border-black");break;
-  case "pink":document.body.style.background="pink";document.getElementById("pink").classList.add("border-black");break;
-  
-           
+function change(color) {
+    // Remove border-black from all .border-2 elements
+    const items = document.getElementsByClassName("border-2");
+    for (let item of items) {
+        item.classList.remove("border-black");
     }
-        }
+
+    // Change background & add border-black to the selected color element
+    document.body.style.background = color;
+    document.getElementById(color).classList.add("border-black");
+}
 
 
 // function calculate(operation){
